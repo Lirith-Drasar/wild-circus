@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ show.id }}</td>
                 <td>{{ show.Name }}</td>
                 <td>{{ show.Description }}</td>
+                <td>{{ show.Image }}</td>
                 <td>
                     <a href="{{ path('shows_show', {'id': show.id}) }}">show</a>
                     <a href="{{ path('shows_edit', {'id': show.id}) }}">edit</a>

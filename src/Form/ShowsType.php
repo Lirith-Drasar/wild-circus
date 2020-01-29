@@ -14,6 +14,8 @@ class ShowsType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
+            ->add('Image')
+
         ;
     }
 
