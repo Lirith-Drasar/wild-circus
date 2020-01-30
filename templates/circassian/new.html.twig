@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Circassian{% endblock %}
+
+{% block body %}
+    <h1>Create new Circassian</h1>
+
+    {{ include('circassian/_form.html.twig') }}
+
+    <a href="{{ path('circassian_index') }}">back to list</a>
+{% endblock %}

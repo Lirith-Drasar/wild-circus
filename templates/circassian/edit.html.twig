@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Circassian{% endblock %}
+
+{% block body %}
+    <h1>Edit Circassian</h1>
+
+    {{ include('circassian/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('circassian_index') }}">back to list</a>
+
+    {{ include('circassian/_delete_form.html.twig') }}
+{% endblock %}

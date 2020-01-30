@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Circassian index{% endblock %}
+
+{% block body %}
+    <h1>Circassian index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for circassian in circassians %}
+            <tr>
+                <td>{{ circassian.id }}</td>
+                <td>{{ circassian.Firstname }}</td>
+                <td>{{ circassian.Lastname }}</td>
+                <td>
+                    <a href="{{ path('circassian_show', {'id': circassian.id}) }}">show</a>
+                    <a href="{{ path('circassian_edit', {'id': circassian.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('circassian_new') }}">Create new</a>
+{% endblock %}
