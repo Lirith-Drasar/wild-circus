@@ -13,7 +13,7 @@
                 {% for show in show %}
                     <div class="service_card">
                         <p class="service_detail">{{ show.name }}</p>
-                        <p class="service_detail">{{ show.image }}</p>
+                        <img src="../images/{{ show.image }}" class="presentation_img" alt="illustration">
                         <p class="service_detail">{{ show.description }}</p>
                     </div>
                 {% endfor %}
