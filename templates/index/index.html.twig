@@ -3,5 +3,50 @@
 {% block title %}Hello Wild-circus!{% endblock %}
 
 {% block body %}
-<h1>Wild-circus</h1>
+
+<h1>Wild circus, un cirque que pour les wilders</h1>
+    <!-- Show presentation -->
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for shows in show %}
+                    <div class="presentation_part">
+                        {{ shows.name }}
+                        {{ shows.image }}
+                        {{ shows.description }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Show presentation -->
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for city in city %}
+                    <div class="presentation_part">
+                        {{ city.name }}
+                        {{ city.adress }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Show presentation -->
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for performance in performance %}
+                    <div class="presentation_part">
+                        {{ performance.name }}
+                        {{ performance.description }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
+
