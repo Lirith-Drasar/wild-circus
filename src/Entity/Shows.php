@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -30,6 +32,22 @@ class Shows
      * @ORM\Column(type="string", length=255)
      */
     private $Image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\City", inversedBy="shows")
+     */
+    private $City;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Performance", inversedBy="shows")
+     */
+    private $Performance;
+
+    public function __construct()
+    {
+        $this->City = new ArrayCollection();
+        $this->Performance = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -68,6 +86,58 @@ class Shows
     public function setImage(string $Image): self
     {
         $this->Image = $Image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|City[]
+     */
+    public function getCity(): Collection
+    {
+        return $this->City;
+    }
+
+    public function addCity(City $city): self
+    {
+        if (!$this->City->contains($city)) {
+            $this->City[] = $city;
+        }
+
+        return $this;
+    }
+
+    public function removeCity(City $city): self
+    {
+        if ($this->City->contains($city)) {
+            $this->City->removeElement($city);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Performance[]
+     */
+    public function getPerformance(): Collection
+    {
+        return $this->Performance;
+    }
+
+    public function addPerformance(Performance $performance): self
+    {
+        if (!$this->Performance->contains($performance)) {
+            $this->Performance[] = $performance;
+        }
+
+        return $this;
+    }
+
+    public function removePerformance(Performance $performance): self
+    {
+        if ($this->Performance->contains($performance)) {
+            $this->Performance->removeElement($performance);
+        }
 
         return $this;
     }

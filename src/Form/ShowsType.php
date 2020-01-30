@@ -14,9 +14,7 @@ class ShowsType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
-            ->add('Image')
-
-        ;
+            ->add('Image');
     }
 
     public function configureOptions(OptionsResolver $resolver)
