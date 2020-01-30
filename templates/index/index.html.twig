@@ -4,44 +4,42 @@
 
 {% block body %}
 
-<h1>Wild circus, un cirque que pour les wilders</h1>
-    <!-- Show presentation -->
-    <section class="presentation_section">
-        <div class="presentation_detail">
-            <div class="presentations">
-                {% for shows in show %}
-                    <div class="presentation_part">
-                        {{ shows.name }}
-                        {{ shows.image }}
-                        {{ shows.description }}
+<h1 class="services_title">Wild circus, un cirque que pour les wilders</h1>
+
+    <!-- Présentation d'équilibr' & Minceur -->
+    <section id="ancre_service" class="service-section">
+        <h2 class="services_subtitle">Nos spectacles</h2>
+        <div class="cards_container">
+                {% for show in show %}
+                    <div class="service_card">
+                        <p class="service_detail">{{ show.name }}</p>
+                        <p class="service_detail">{{ show.image }}</p>
+                        <p class="service_detail">{{ show.description }}</p>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-
-    <!-- Show presentation -->
-    <section class="presentation_section">
-        <div class="presentation_detail">
-            <div class="presentations">
+    <section id="ancre_service" class="service-section">
+        <h2 class="services_subtitle">Nous venons près de chez vous</h2>
+        <div class="cards_container">
                 {% for city in city %}
-                    <div class="presentation_part">
-                        {{ city.name }}
-                        {{ city.adress }}
+                    <div class="service_card">
+                        <p class="service_detail">{{ city.name }}</p>
+                        <p class="service_detail">{{ city.adress }}</p>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
 
-    <!-- Show presentation -->
-    <section class="presentation_section">
-        <div class="presentation_detail">
-            <div class="presentations">
+    <section id="ancre_service" class="service-section">
+        <h2 class="services_subtitle">Nus numéros</h2>
+        <div class="cards_container">
                 {% for performance in performance %}
-                    <div class="presentation_part">
-                        {{ performance.name }}
-                        {{ performance.description }}
+                    <div class="service_card">
+                        <p class="service_detail">{{ performance.name }}</p>
+                        <p class="service_detail">{{ performance.description }}</p>
                     </div>
                 {% endfor %}
             </div>
