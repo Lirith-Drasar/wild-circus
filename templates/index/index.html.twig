@@ -34,12 +34,25 @@
     </section>
 
     <section id="ancre_service" class="service-section">
-        <h2 class="services_subtitle">Nus numéros</h2>
+        <h2 class="services_subtitle">Nos numéros</h2>
         <div class="cards_container">
                 {% for performance in performance %}
                     <div class="service_card">
                         <p class="service_detail">{{ performance.name }}</p>
                         <p class="service_detail">{{ performance.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="ancre_service" class="service-section">
+        <h2 class="services_subtitle">Nos prix</h2>
+        <div class="cards_container">
+                {% for price in price %}
+                    <div class="service_card">
+                        <p class="service_detail">Adult : {{ price.adult }}</p>
+                        <p class="service_detail">Enfant : {{ price.children }}</p>
                     </div>
                 {% endfor %}
             </div>

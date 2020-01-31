@@ -8,6 +8,10 @@ body {
     background-size: cover;
     }
 
+.presentation_img{
+    margin: 15%;
+}
+
 .service_section {
     display: flex;
     flex-wrap:wrap;

@@ -1,1 +1,42 @@
-# wild-circus
+# The French Copywriter - Starter Kit - Symfony 4.4.\*
+
+This starter kit is here to easily install The French Copywriter's repository.
+
+## Getting Started for Projects
+
+### Prerequisites
+
+1. Check php is installed
+2. Check symfony is installed
+3. Check composer is installed
+4. Check yarn & node are installed
+
+### Install
+
+1. Clone this project with git clone `git clone https://github.com/Lirith-Drasar/wild-circus.gitt`
+2. Move to the repository with `cd wild-circus/`
+3. Run `composer install`
+4. Run `yarn install`
+5. Copy `.env` file and modify it in `.env.local`
+6. Replace user, password and db_name in the line `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`in`.env.local` 
+
+### Working
+
+1. Run `php bin/console server:run` to launch your local php web server
+2. Run `yarn run dev --watch` to launch your local server for assets
+3. Run `mysql.server start` to launch mysql database
+4. Go on `https://localhost:8000/` to visit the website
+
+### Windows Users
+
+If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
+
+`git config --global core.autocrlf true`
+
+## Load fixtures
+
+In order to load fixtures in the database so they could be visible on your website, please run :
+
+1. Run `php bin/console make:migration` to create the migration file
+2. Run `php bin/console make:migrations:migrate` to create the database's tables
+3. Run `php bin/console doctrine:fixtures:load` to load fixtures on the database
