@@ -36,3 +36,10 @@ If you develop on Windows, you should edit you git configuration to change your 
 ## Load DDB
 
 Run `mysqldump -u user -p wild-circus<wild-circus.sql`  for save information in DDB. 
+
+
+
+
+Link Wireframe  https://wireframepro.mockflow.com/view/ 
+
+Database in public/images
