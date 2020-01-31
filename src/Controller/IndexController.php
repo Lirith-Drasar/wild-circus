@@ -2,12 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Shows;
-use App\Entity\Price;
-use App\Entity\Circassian;
-use App\Entity\City;
-use App\Entity\Performance;
-
 use App\Repository\ShowsRepository;
 use App\Repository\PriceRepository;
 use App\Repository\CityRepository;

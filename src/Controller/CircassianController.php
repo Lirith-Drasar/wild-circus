@@ -6,17 +6,13 @@ use App\Entity\Circassian;
 use App\Form\CircassianType;
 use App\Repository\CircassianRepository;
 
-use App\Repository\PerformanceRepository;
-use App\Entity\Performance;
-use App\Form\PerformanceType;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/circassian")
+ * @Route("/admin/circassian")
  */
 class CircassianController extends AbstractController
 {
