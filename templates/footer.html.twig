@@ -1,0 +1,12 @@
+{% block footer %}
+    <ul class="ul_footer">
+        <div class= "box-footer">
+            {% if app.user %}
+                <li class="nav_lifooter"><a class="footer_link" href="{{ path('app_logout') }}">{{ 'disconnect' }}</a>
+                {% else %}
+                <li class="nav_lifooter"><a class="footer_link" href="{{ path('app_login') }}">{{ 'connect'}}</a>
+            </li>
+            {% endif %}
+        </div>
+    </ul>
+{% endblock %}

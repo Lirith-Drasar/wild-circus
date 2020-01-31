@@ -1,0 +1,19 @@
+.ul_footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer_link {
+    color: black;
+}
+
+/* When the visitor points to the link */
+.footer_link:hover {
+    color: rgb(206, 9, 255);
+    text-decoration: none;
+}
+
+.footer_link:active {
+    text-decoration: none;
+    color: rgb(206, 9, 255);
+}
