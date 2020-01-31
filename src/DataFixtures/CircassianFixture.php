@@ -11,28 +11,12 @@ class CircassianFixture extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $circassian = new Circassian();
-        $circassian->setLastName('Dupont');
-        $circassian->setFirstName('Duran');
-        $circassian->set('Dupont');
-
-        $manager->persist($circassian);
-
-        $circassian1 = new Circassian();
-        $circassian1->setLastName('Dupont');
-        $circassian1->setFirstName('Duran');
-        $manager->persist($circassian1);
-
-        $circassian2 = new Circassian();
-        $circassian2->setLastName('Dupont');
-        $circassian2->setFirstName('Duran');
-        $manager->persist($circassian2);
-
-        $circassian3 = new Circassian();
-        $circassian3->setLastName('Dupont');
-        $circassian3->setFirstName('Duran');
-        $manager->persist($circassian3);
-
+        for ($i = 1; $i <= 50; $i++) {  
+            $circassian = new Circassian();  
+            $circassian->setLastname('Je suis : ' . $i); 
+            $circassian->setDescription('Je suis la description numéro : ' . $i);   
+            $manager->persist($circassian);  
+        }  
         $manager->flush();
     }
 }

@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Shows;
 use App\Entity\Performance;
+use App\Entity\Circassian;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -17,7 +19,7 @@ class PerformanceType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
-            ->add('Circassian', EntityType::class, [
+            ->add('Circassians', EntityType::class, [
                 'class' => Circassian::class,
                 'choice_label' => 'lastname',
                 'multiple' => true,
