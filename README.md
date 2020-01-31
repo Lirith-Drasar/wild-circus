@@ -33,10 +33,6 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 `git config --global core.autocrlf true`
 
-## Load fixtures
+## Load DDB
 
-In order to load fixtures in the database so they could be visible on your website, please run :
-
-1. Run `php bin/console make:migration` to create the migration file
-2. Run `php bin/console make:migrations:migrate` to create the database's tables
-3. Run `php bin/console doctrine:fixtures:load` to load fixtures on the database
+Run `mysqldump -u user -p wild-circus<wild-circus.sql`  for save information in DDB. 
